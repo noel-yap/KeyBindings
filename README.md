@@ -12,3 +12,6 @@
 * https://math.dartmouth.edu/~sarunas/Linux_Compose_Key_Sequences.html
 * http://bob.cakebox.net/osxcompose/DefaultKeyBinding.dict
 
+* https://gist.github.com/stephancasas/74c4621e2492fb875f0f42778d432973
+* https://eastmanreference.com/complete-list-of-applescript-key-codes
+* https://github.com/NUIKit/CGSInternal/blob/master/CGSHotKeys.h

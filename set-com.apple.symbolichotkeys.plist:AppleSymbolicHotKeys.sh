@@ -1,0 +1,250 @@
+#!/opt/homebrew/bin/bash
+
+declare -rA symbolic_hotkeys=(
+  # disable F14 ↦ Decrease display brightness
+  [53]="
+    <dict>
+      <key>enabled</key><false/>
+      <key>value</key><dict>
+        <key>type</key><string>standard</string>
+        <key>parameters</key>
+        <array>
+          <integer>65535</integer>
+          <integer>107</integer>
+          <integer>8388608</integer>
+        </array>
+      </dict>
+    </dict>
+  "
+  # disable F15 ↦ Increase display brightness
+  [54]="
+    <dict>
+      <key>enabled</key><false/>
+      <key>value</key><dict>
+        <key>type</key><string>standard</string>
+        <key>parameters</key>
+        <array>
+          <integer>65535</integer>
+          <integer>113</integer>
+          <integer>8388608</integer>
+        </array>
+      </dict>
+    </dict>
+  "
+  # disable ⌥+F14 ↦ Open Displays Brightness System Settings
+  [55]="
+    <dict>
+      <key>enabled</key><false/>
+      <key>value</key><dict>
+        <key>type</key><string>standard</string>
+        <key>parameters</key>
+        <array>
+          <integer>65535</integer>
+          <integer>107</integer>
+          <integer>8912896</integer>
+        </array>
+      </dict>
+    </dict>
+  "
+  # disable ⌥+F15 ↦ Open Displays Brightness System Settings
+  [56]="
+    <dict>
+      <key>enabled</key><false/>
+      <key>value</key><dict>
+        <key>type</key><string>standard</string>
+        <key>parameters</key>
+        <array>
+          <integer>65535</integer>
+          <integer>113</integer>
+          <integer>8912896</integer>
+        </array>
+      </dict>
+    </dict>
+  "
+  # enable ⌥⎙ ↦ Screenshot Region
+  [30]="
+    <dict>
+      <key>enabled</key><true/>
+      <key>value</key><dict>
+        <key>type</key><string>standard</string>
+        <key>parameters</key>
+        <array>
+          <integer>65535</integer>
+          <integer>105</integer>
+          <integer>8912896</integer>
+        </array>
+      </dict>
+    </dict>
+  "
+  # disable ⌃← ↦ Move to space left
+  [79]="
+    <dict>
+      <key>enabled</key><false/>
+      <key>value</key><dict>
+        <key>type</key><string>standard</string>
+        <key>parameters</key>
+        <array>
+          <integer>65535</integer>
+          <integer>123</integer>
+          <integer>10747904</integer>
+        </array>
+      </dict>
+    </dict>
+  "
+  # disable ⇧⌥⌘9 ↦ Move to space right
+  [80]="
+    <dict>
+      <key>enabled</key><false/>
+      <key>value</key><dict>
+        <key>type</key><string>standard</string>
+        <key>parameters</key>
+        <array>
+          <integer>57</integer>
+          <integer>92</integer>
+          <integer>3801088</integer>
+        </array>
+      </dict>
+    </dict>
+  "
+  # enable ⌥⌘1 ↦ Move to desktop 1
+  [118]="
+    <dict>
+      <key>enabled</key><true/>
+      <key>value</key><dict>
+        <key>type</key><string>standard</string>
+        <key>parameters</key>
+        <array>
+          <integer>55</integer>
+          <integer>89</integer>
+          <integer>3670016</integer>
+        </array>
+      </dict>
+    </dict>
+  "
+  # enable ⌥⌘2 ↦ Move to desktop 2
+  [119]="
+    <dict>
+      <key>enabled</key><true/>
+      <key>value</key><dict>
+        <key>type</key><string>standard</string>
+        <key>parameters</key>
+        <array>
+          <integer>56</integer>
+          <integer>91</integer>
+          <integer>3670016</integer>
+        </array>
+      </dict>
+    </dict>
+  "
+  # enable ⌥⌘3 ↦ Move to desktop 3
+  [120]="
+    <dict>
+      <key>enabled</key><true/>
+      <key>value</key><dict>
+        <key>type</key><string>standard</string>
+        <key>parameters</key>
+        <array>
+          <integer>57</integer>
+          <integer>92</integer>
+          <integer>3670016</integer>
+        </array>
+      </dict>
+    </dict>
+  "
+  # enable ⌥⌘4 ↦ Move to desktop 4
+  [121]="
+    <dict>
+      <key>enabled</key><true/>
+      <key>value</key><dict>
+        <key>type</key><string>standard</string>
+        <key>parameters</key>
+        <array>
+          <integer>52</integer>
+          <integer>86</integer>
+          <integer>3670016</integer>
+        </array>
+      </dict>
+    </dict>
+  "
+  # enable ⌥⌘5 ↦ Move to desktop 5
+  [122]="
+    <dict>
+      <key>enabled</key><true/>
+      <key>value</key><dict>
+        <key>type</key><string>standard</string>
+        <key>parameters</key>
+        <array>
+          <integer>53</integer>
+          <integer>87</integer>
+          <integer>3670016</integer>
+        </array>
+      </dict>
+    </dict>
+  "
+  # enable ⌥⌘6 ↦ Move to desktop 6
+  [123]="
+    <dict>
+      <key>enabled</key><true/>
+      <key>value</key><dict>
+        <key>type</key><string>standard</string>
+        <key>parameters</key>
+        <array>
+          <integer>54</integer>
+          <integer>88</integer>
+          <integer>3670016</integer>
+        </array>
+      </dict>
+    </dict>
+  "
+  # enable ⌥⌘7 ↦ Move to desktop 7
+  [124]="
+    <dict>
+      <key>enabled</key><true/>
+      <key>value</key><dict>
+        <key>type</key><string>standard</string>
+        <key>parameters</key>
+        <array>
+          <integer>49</integer>
+          <integer>83</integer>
+          <integer>3670016</integer>
+        </array>
+      </dict>
+    </dict>
+  "
+  # enable ⌥⌘8 ↦ Move to desktop 8
+  [125]="
+    <dict>
+      <key>enabled</key><true/>
+      <key>value</key><dict>
+        <key>type</key><string>standard</string>
+        <key>parameters</key>
+        <array>
+          <integer>50</integer>
+          <integer>84</integer>
+          <integer>3670016</integer>
+        </array>
+      </dict>
+    </dict>
+  "
+  # enable ⌥⌘9 ↦ Move to desktop 9
+  [126]="
+    <dict>
+      <key>enabled</key><true/>
+      <key>value</key><dict>
+        <key>type</key><string>standard</string>
+        <key>parameters</key>
+        <array>
+          <integer>51</integer>
+          <integer>85</integer>
+          <integer>3670016</integer>
+        </array>
+      </dict>
+    </dict>
+  "
+)
+
+for action in "${!symbolic_hotkeys[@]}"; do
+  defaults write com.apple.symbolichotkeys.plist AppleSymbolicHotKeys -dict-add "${action}" "${symbolic_hotkeys[${action}]}"
+done
+
+/System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
