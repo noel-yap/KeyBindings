@@ -1,5 +1,9 @@
 {
 	"\UF712" = {
+	    "\U0008" = ("insertText:", "\U232B"); /* F15, BACKSPACE: ERASE TO THE LEFT */
+	    "\U0009" = ("insertText:", "\U21E5"); /* F15, TAB: RIGHTWARDS ARROW TO BAR */
+	    "\U000D" = ("insertText:", "\U2B90"); /* F15, ENTER: RETURN LEFT */
+	    "\U001B" = ("insertText:", "\U238B"); /* F15, ESCAPE: BROKEN CIRCLE WITH NORTHWEST ARROW */
 		"\U0020" = {
 			"\U0020" = ("insertText:", "\U00A0"); /* F15, SPACE, SPACE: NO-BREAK SPACE */
 			"\U0027" = ("insertText:", "\U0027"); /* F15, SPACE, APOSTROPHE: APOSTROPHE */
@@ -3928,5 +3932,15 @@
 			"\U1D16E" = ("insertText:", "\U1D1BE"); /* F15, MUSICAL SYMBOL MINIMA BLACK, MUSICAL SYMBOL COMBINING FLAG-1: MUSICAL SYMBOL SEMIMINIMA BLACK */
 			"\U1D16F" = ("insertText:", "\U1D1C0"); /* F15, MUSICAL SYMBOL MINIMA BLACK, MUSICAL SYMBOL COMBINING FLAG-2: MUSICAL SYMBOL FUSA BLACK */
 		};
+		"\UF700" = ("insertText:", "\U2191"); /* F15, UP ARROW: UPWARDS ARROW */
+		"\UF701" = ("insertText:", "\U2193"); /* F15, DOWN ARROW: DOWNWARDS ARROW */
+		"\UF702" = ("insertText:", "\U2190"); /* F15, LEFT ARROW: LEFTWARDS ARROW */
+		"@\UF702" = ("insertText:", "\U2196"); /* F15, HOME: NORTH WEST ARROW */
+		"\UF703" = ("insertText:", "\U2192"); /* F15, RIGHT ARROW: RIGHTWARDS ARROW */
+		"@\UF703" = ("insertText:", "\U2198"); /* F15, END: SOUTH EAST ARROW */
+		"\UF727" = ("insertText:", "\U2380"); /* F15, INSERT: INSERTION SYMBOL */
+		"\UF728" = ("insertText:", "\U2326"); /* F15, DELETE: ERASE TO THE RIGHT */
+		"\UF72C" = ("insertText:", "\U21DE"); /* F15, PAGE UP: UPWARDS ARROW WITH DOUBLE STROKE */
+		"\UF72D" = ("insertText:", "\U21DF"); /* F15, PAGE DOWN: DOWNWARDS ARROW WITH DOUBLE STROKE */
 	};
 }
