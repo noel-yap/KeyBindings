@@ -1,0 +1,20 @@
+# Test helpers for the symbolic-hotkey scripts.
+
+# Source a hotkey shlib (which defines a `symbolic_hotkeys` associative
+# array) and print each entry as:
+#
+#   <action>\0<value>\036
+#
+# Fields are NUL-separated and records are terminated by RS (0x1e) so that
+# arbitrary multiline values survive intact for a caller to parse.
+#
+# Usage: dump_symbolic_hotkeys <path-to-hotkey-shlib>
+dump_symbolic_hotkeys() {
+  local shlib="$1"
+  source "${shlib}"
+
+  local action
+  for action in "${!symbolic_hotkeys[@]}"; do
+    printf '%s\0%s\036' "${action}" "${symbolic_hotkeys[${action}]}"
+  done
+}

@@ -1,5 +1,28 @@
 # KeyBindings
 
+## Symbolic hotkeys
+
+Each `set-*-hotkeys.sh` script applies one group of macOS symbolic hotkeys via
+`defaults`, then reloads them with `activateSettings`:
+
+* `set-brightness-hotkeys.sh` — disable F14/F15 (and ⌥F14/⌥F15) brightness
+* `set-screenshot-hotkeys.sh` — ⌥⎙ screenshot region
+* `set-desktop-hotkeys.sh` — ⌥⌘← / ⌥⌘→ and ⌥⌘1–9 desktop navigation
+
+`set-hotkeys.sh` runs all three. Each script sources its definitions from the
+matching `*-hotkeys.shlib` and the shared applier in
+`apply-symbolic-hotkeys.shlib`. Running them requires Homebrew bash
+(`/opt/homebrew/bin/bash`).
+
+## Tests
+
+```sh
+make test
+```
+
+This initializes the `bash-mock` submodule (under `vendor/`) if needed and runs
+the `pytest` suite in `tests/`.
+
 ## Some helpful links
 
 * https://www.unicode.org/Public/MAPPINGS/VENDORS/APPLE/CORPCHAR.TXT

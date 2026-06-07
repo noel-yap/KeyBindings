@@ -1,0 +1,22 @@
+source "$(dirname "${BASH_SOURCE[0]}")/vendor/bash-mock/bash-inject.shlib"
+
+# Declare the external command dependencies so tests can override them by
+# name. In production these resolve to the real commands; activateSettings
+# gets a basename passthrough because it lives outside PATH.
+@inject defaults
+@inject /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings
+
+# Writes a set of symbolic hotkey definitions to the
+# com.apple.symbolichotkeys domain and reloads them so the changes
+# take effect without a logout.
+#
+# Usage: apply_symbolic_hotkeys <name-of-associative-array>
+apply_symbolic_hotkeys() {
+  local -n hotkeys=$1
+  local action
+  for action in "${!hotkeys[@]}"; do
+    defaults write com.apple.symbolichotkeys.plist AppleSymbolicHotKeys -dict-add "${action}" "${hotkeys[${action}]}"
+  done
+
+  activateSettings -u
+}

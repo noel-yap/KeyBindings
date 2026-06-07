@@ -1,0 +1,62 @@
+declare -rA symbolic_hotkeys=(
+  # disable F14 ↦ Decrease display brightness
+  [53]="
+    <dict>
+      <key>enabled</key><false/>
+      <key>value</key><dict>
+        <key>type</key><string>standard</string>
+        <key>parameters</key>
+        <array>
+          <integer>65535</integer>
+          <integer>107</integer>
+          <integer>8388608</integer>
+        </array>
+      </dict>
+    </dict>
+  "
+  # disable F15 ↦ Increase display brightness
+  [54]="
+    <dict>
+      <key>enabled</key><false/>
+      <key>value</key><dict>
+        <key>type</key><string>standard</string>
+        <key>parameters</key>
+        <array>
+          <integer>65535</integer>
+          <integer>113</integer>
+          <integer>8388608</integer>
+        </array>
+      </dict>
+    </dict>
+  "
+  # disable ⌥+F14 ↦ Open Displays Brightness System Settings
+  [55]="
+    <dict>
+      <key>enabled</key><false/>
+      <key>value</key><dict>
+        <key>type</key><string>standard</string>
+        <key>parameters</key>
+        <array>
+          <integer>65535</integer>
+          <integer>107</integer>
+          <integer>8912896</integer>
+        </array>
+      </dict>
+    </dict>
+  "
+  # disable ⌥+F15 ↦ Open Displays Brightness System Settings
+  [56]="
+    <dict>
+      <key>enabled</key><false/>
+      <key>value</key><dict>
+        <key>type</key><string>standard</string>
+        <key>parameters</key>
+        <array>
+          <integer>65535</integer>
+          <integer>113</integer>
+          <integer>8912896</integer>
+        </array>
+      </dict>
+    </dict>
+  "
+)
