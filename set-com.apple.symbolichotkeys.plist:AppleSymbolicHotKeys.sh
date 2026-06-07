@@ -76,32 +76,32 @@ declare -rA symbolic_hotkeys=(
       </dict>
     </dict>
   "
-  # disable ⌃← ↦ Move to space left
+  # enable ⌥⌘← ↦ Move to desktop left
   [79]="
     <dict>
-      <key>enabled</key><false/>
+      <key>enabled</key><true/>
       <key>value</key><dict>
         <key>type</key><string>standard</string>
         <key>parameters</key>
         <array>
           <integer>65535</integer>
           <integer>123</integer>
-          <integer>10747904</integer>
+          <integer>9961472</integer>
         </array>
       </dict>
     </dict>
   "
-  # disable ⇧⌥⌘9 ↦ Move to space right
-  [80]="
+  # enable ⌥⌘→ ↦ Move to desktop right
+  [81]="
     <dict>
-      <key>enabled</key><false/>
+      <key>enabled</key><true/>
       <key>value</key><dict>
         <key>type</key><string>standard</string>
         <key>parameters</key>
         <array>
-          <integer>57</integer>
-          <integer>92</integer>
-          <integer>3801088</integer>
+          <integer>65535</integer>
+          <integer>124</integer>
+          <integer>9961472</integer>
         </array>
       </dict>
     </dict>
@@ -114,9 +114,9 @@ declare -rA symbolic_hotkeys=(
         <key>type</key><string>standard</string>
         <key>parameters</key>
         <array>
-          <integer>55</integer>
-          <integer>89</integer>
-          <integer>3670016</integer>
+          <integer>49</integer>
+          <integer>18</integer>
+          <integer>1572864</integer>
         </array>
       </dict>
     </dict>
@@ -129,9 +129,9 @@ declare -rA symbolic_hotkeys=(
         <key>type</key><string>standard</string>
         <key>parameters</key>
         <array>
-          <integer>56</integer>
-          <integer>91</integer>
-          <integer>3670016</integer>
+          <integer>50</integer>
+          <integer>19</integer>
+          <integer>1572864</integer>
         </array>
       </dict>
     </dict>
@@ -144,9 +144,9 @@ declare -rA symbolic_hotkeys=(
         <key>type</key><string>standard</string>
         <key>parameters</key>
         <array>
-          <integer>57</integer>
-          <integer>92</integer>
-          <integer>3670016</integer>
+          <integer>51</integer>
+          <integer>20</integer>
+          <integer>1572864</integer>
         </array>
       </dict>
     </dict>
@@ -160,8 +160,8 @@ declare -rA symbolic_hotkeys=(
         <key>parameters</key>
         <array>
           <integer>52</integer>
-          <integer>86</integer>
-          <integer>3670016</integer>
+          <integer>21</integer>
+          <integer>1572864</integer>
         </array>
       </dict>
     </dict>
@@ -175,8 +175,8 @@ declare -rA symbolic_hotkeys=(
         <key>parameters</key>
         <array>
           <integer>53</integer>
-          <integer>87</integer>
-          <integer>3670016</integer>
+          <integer>23</integer>
+          <integer>1572864</integer>
         </array>
       </dict>
     </dict>
@@ -190,8 +190,8 @@ declare -rA symbolic_hotkeys=(
         <key>parameters</key>
         <array>
           <integer>54</integer>
-          <integer>88</integer>
-          <integer>3670016</integer>
+          <integer>22</integer>
+          <integer>1572864</integer>
         </array>
       </dict>
     </dict>
@@ -204,9 +204,9 @@ declare -rA symbolic_hotkeys=(
         <key>type</key><string>standard</string>
         <key>parameters</key>
         <array>
-          <integer>49</integer>
-          <integer>83</integer>
-          <integer>3670016</integer>
+          <integer>55</integer>
+          <integer>26</integer>
+          <integer>1572864</integer>
         </array>
       </dict>
     </dict>
@@ -219,9 +219,9 @@ declare -rA symbolic_hotkeys=(
         <key>type</key><string>standard</string>
         <key>parameters</key>
         <array>
-          <integer>50</integer>
-          <integer>84</integer>
-          <integer>3670016</integer>
+          <integer>56</integer>
+          <integer>28</integer>
+          <integer>1572864</integer>
         </array>
       </dict>
     </dict>
@@ -234,9 +234,9 @@ declare -rA symbolic_hotkeys=(
         <key>type</key><string>standard</string>
         <key>parameters</key>
         <array>
-          <integer>51</integer>
-          <integer>85</integer>
-          <integer>3670016</integer>
+          <integer>57</integer>
+          <integer>25</integer>
+          <integer>1572864</integer>
         </array>
       </dict>
     </dict>
